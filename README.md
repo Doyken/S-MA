@@ -9,7 +9,7 @@ The code will released soon.
   >>`transformer == 4.10.0`  
   >>`scikit-learn == 0.24.2`
 # Dataset
-We provide text data in dataset\data\. As for images, please download from the link below:  
+We provide text data in `dataset\data\`. As for images, please download from the link below:  
 MVSA-*  
 http://mcrlab.net/research/mvsa-sentiment-analysis-on-multi-view-social-data/  
 HFM https://github.com/headacheboy/data-of-multimodal-sarcasm-detection
