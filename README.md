@@ -13,3 +13,28 @@ We provide text data in `dataset\data\`. As for images, please download from the
 MVSA-*  
 http://mcrlab.net/research/mvsa-sentiment-analysis-on-multi-view-social-data/  
 HFM https://github.com/headacheboy/data-of-multimodal-sarcasm-detection
+# Short_Attention
+ def forward(self,x,index ,now_epoch):  
+        >>>x= self.multiAttn(x, x, x)  
+        >>>if (self.mode == 0):  
+                >>>>if now_epoch ==0:  
+                    >>>>>HT_t = x  
+                   
+                    >>>>>self.CO_collection_tmp.append(x)  
+                   
+                >>>else:  
+                    >>>>if (index == 0):  
+                        >>>>>self.CO_collection = self.CO_collection_tmp  
+                        >>>>>self.CO_collection_tmp = []  
+                    >>>>>self.CO_collection_tmp.append(x)  
+
+                    >>>>co_tminus1 = ( self.CO_collection_tmp[index] + x) / 2  
+                    >>>>HT_t =(F.tanh(torch.bmm(x, F.tanh((co_tminus1.transpose(1, 2))))))  
+                    >>>>dim_size = HT_t.size(2)  
+                    >>>>linear_layer_HT_t= linear(dim_size)  
+                    >>>>linear_layer_HT_t =linear_layer_HT_t.to(self.device)  
+                    >>>>HT_t=linear_layer_HT_t(HT_t)  
+
+                >>>return HT_t  
+        >>>else:  
+            >>>>return x  
