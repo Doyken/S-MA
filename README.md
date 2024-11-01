@@ -10,8 +10,8 @@ The code will released soon.
   `scikit-learn == 0.24.2`
 # Dataset
 We provide text data in `dataset\data\`. As for images, please download from the link below:  
-MVSA-* http://mcrlab.net/research/mvsa-sentiment-analysis-on-multi-view-social-data/  
-HFM https://github.com/headacheboy/data-of-multimodal-sarcasm-detection
+MVSA-* `http://mcrlab.net/research/mvsa-sentiment-analysis-on-multi-view-social-data/ ` 
+HFM `https://github.com/headacheboy/data-of-multimodal-sarcasm-detection`
 
 For example, MVSA-Single's images should be put in `dataset\data\MVSA-single\dataset_image`
 # Run Code
@@ -26,7 +26,7 @@ Download model:
 Google drive:
 
 
-https://drive.google.com/drive/folders/1CLHGGq-NTeEUZsNhy651MTmBmKFyrcNG?usp=sharing
+`https://drive.google.com/drive/folders/1CLHGGq-NTeEUZsNhy651MTmBmKFyrcNG?usp=sharing`
 # Short-Memory Attention 
 Here is the core of Short-Memory Attention. For more details, please refer to the 'model.py'.
 
