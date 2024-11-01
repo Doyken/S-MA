@@ -15,9 +15,8 @@ HFM https://github.com/headacheboy/data-of-multimodal-sarcasm-detection
 # Run Code
 Download model:
 百度网盘：
-
-链接：https://pan.baidu.com/s/1v6gUz3dDj3uhglJnmQAs1Q 
-提取码：cxz1
+`链接：https://pan.baidu.com/s/1v6gUz3dDj3uhglJnmQAs1Q` 
+`提取码：cxz1`
 
 # Short-Memory Attention 
 Here is the core of Short-Memory Attention. For more details, please refer to the 'model.py'.
