@@ -29,6 +29,9 @@ Google drive:
 
 
 `https://drive.google.com/drive/folders/1CLHGGq-NTeEUZsNhy651MTmBmKFyrcNG?usp=sharing`
+
+
+If you want to run the code, just select the `'main.py'` file.
 # Short-Memory Attention 
 Here is the core of Short-Memory Attention. For more details, please refer to the 'model.py'.
 
