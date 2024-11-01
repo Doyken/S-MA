@@ -12,6 +12,13 @@ The code will released soon.
 We provide text data in `dataset\data\`. As for images, please download from the link below:  
 MVSA-* http://mcrlab.net/research/mvsa-sentiment-analysis-on-multi-view-social-data/  
 HFM https://github.com/headacheboy/data-of-multimodal-sarcasm-detection
+# Run Code
+Download model:
+百度网盘：
+
+链接：https://pan.baidu.com/s/1v6gUz3dDj3uhglJnmQAs1Q 
+提取码：cxz1
+
 # Short-Memory Attention 
 Here is the core of Short-Memory Attention. For more details, please refer to the 'model.py'.
 
