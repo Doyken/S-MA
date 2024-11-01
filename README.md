@@ -11,6 +11,8 @@ The code will released soon.
 # Dataset
 We provide text data in `dataset\data\`. As for images, please download from the link below:  
 MVSA-* `http://mcrlab.net/research/mvsa-sentiment-analysis-on-multi-view-social-data/ ` 
+
+
 HFM `https://github.com/headacheboy/data-of-multimodal-sarcasm-detection`
 
 For example, MVSA-Single's images should be put in `dataset\data\MVSA-single\dataset_image`
