@@ -354,39 +354,6 @@ class TransformerEncoder(nn.Module):
                 x_b = self.transformer_inter[i](i, x_a, x_b)
         return x_b
 
-class Hostroy_Mul(nn.Module):
-    def __init__(self):
-        super(Hostroy_Mul, self).__init__()
-        self.r =1
-        self.multiAttn= MultiHeadedAttention(8, 768)
-
-        self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-        self.mode =0
-        self.CO_collection = []
-        self.CO_collection_tmp = []
-    def forward(self,x,index ,now_epoch):
-        x= self.multiAttn(x, x, x)
-        if (self.mode == 0):
-                if now_epoch ==0:
-                    HT_t = x
-                    self.CO_collection_tmp.append(x)
-                else:
-                    if (index == 0):
-                        self.CO_collection = self.CO_collection_tmp
-                        self.CO_collection_tmp = []
-                    self.CO_collection_tmp.append(x)
-
-                    co_tminus1 = ( self.CO_collection_tmp[index] + x) / 2
-                    HT_t =(F.tanh(torch.bmm(x, F.tanh((co_tminus1.transpose(1, 2))))))
-                    dim_size = HT_t.size(2)
-                    linear_layer_HT_t= linear(dim_size)
-                    linear_layer_HT_t =linear_layer_HT_t.to(self.device)
-                    HT_t=linear_layer_HT_t(HT_t)
-
-                return HT_t
-        else:
-            return x
-
 
 
 class Transformer_Based_Model(nn.Module):
