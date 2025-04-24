@@ -467,10 +467,6 @@ class Transformer_Based_Model(nn.Module):
                                         return_dict=self.text_config.use_return_dict
                                         )
         icouf = image_init.last_hidden_state
-        co = self.hostory(icouf, index, epoch)
-        icouf = torch.cat(([icouf, co]), dim=1)
-
-
 
         # Intra- and Inter-modal Transformers
         t_t_transformer_out = self.t_t(textf, textf)
